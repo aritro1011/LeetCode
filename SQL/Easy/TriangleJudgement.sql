@@ -1,8 +1,12 @@
 #Solution
 SELECT *,
         CASE
-            WHEN (x+y)>z THEN "Yes"
-            ELSE "No"
+        WHEN x>0 AND y>0 AND z>0
+        AND (x+y)>z
+        AND (z+x)>y
+        AND(y+z)>x
+        THEN "Yes"
+        ELSE"No"
         END AS Triangle
 FROM Triangle;
 
